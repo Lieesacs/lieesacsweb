@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liée Sacs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    /* (styles stay the same, omitted here for brevity) */
+  </style>
+  <script>
+    function cambiarIdioma(idioma) {
+      if(idioma === 'es') window.location.href = 'index.html';
+      else if(idioma === 'ca') window.location.href = 'index-ca.html';
+      else if(idioma === 'en') window.location.href = 'index-en.html';
+    }
+  </script>
+</head>
+<body>
+
+<div class="language-selector">
+  <label for="idioma">Language:</label>
+  <select id="idioma" onchange="cambiarIdioma(this.value)">
+    <option value="es">Español</option>
+    <option value="ca">Català</option>
+    <option value="en" selected>English</option>
+  </select>
+</div>
+
+<!-- Cover with main image -->
+<section class="portada">
+  <img src="FotoPortada.jpg" alt="Liée Sacs Cover" />
+</section>
+
+<!-- Navigation menu -->
+<nav>
+  <a href="#inicio">Home</a>
+  <a href="#tienda">Shop</a>
+  <a href="#sobre">About</a>
+  <a href="#contacto">Contact</a>
+</nav>
+
+<!-- Welcome section -->
+<section id="inicio" class="hero">
+  <h2>"Liée Sacs: elegance and comfort in a unique bag."</h2>
+  <div class="bienvenida">
+    <img src="FotoInici1.JPEG" alt="Artisan workshop" />
+    <img src="FotoInici2.jpg" alt="Natural material" />
+  </div>
+</section>
+
+<!-- Shop with gallery -->
+<section id="tienda">
+  <h2>Shop</h2>
+  <p>Discover our featured models:</p>
+
+<!-- Product presentation -->
+<div class="item">
+  <img src="Colores-Disponibles.jpg" alt="Available colors" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+  <div class="overlay"><strong>Liée Anse</strong> · €25</div>
+  <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
+    The <strong>Liée Anse</strong> bag is the perfect choice for daily use: from a casual stroll to an informal outing. Handmade with care and dedication, it can be personalized by choosing a color that reflects your personal style.
+    Customization available: 1 color of your choice.
+  </p>
+  <button class="buy-button">Buy</button>
+</div>
+
+<!-- Individual color gallery -->
+<h3 style="margin-top: 3rem;">Available colors:</h3>
+<div class="gallery">
+  <div class="item">
+    <img src="Blanco.jpg" alt="Anse White" />
+    <div class="overlay">Anse White</div>
+  </div>
+  <div class="item">
+    <img src="Beige.jpg" alt="Anse Beige" />
+    <div class="overlay">Anse Beige</div>
+  </div>
+  <div class="item">
+    <img src="Negro.jpg" alt="Anse Black" />
+    <div class="overlay">Anse Black</div>
+  </div>
+</div>
+
+<!-- Separator -->
+<hr class="separator" />
+
+<!-- Product presentation -->
+<div class="item" style="margin-top: 3rem;">
+  <img src="Liee-eclat.jpeg" alt="Liée Éclat" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+  <div class="overlay"><strong>Liée Éclat</strong> · €35</div>
+  <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
+    The <strong>Liée Éclat</strong> bag is perfect for events, celebrations or special dinners. Handmade to order, with the option to personalize with the color that best represents you.
+    Customization available: 1 color of your choice.
+  </p>
+  <button class="buy-button">Buy</button>
+</div>
+
+<!-- Product presentation -->
+<div class="item">
+  <img src="Liee-eclat-speciale.jpeg" alt="Liée Éclat Speciale" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+  <div class="overlay"><strong>Liée Éclat Speciale</strong> · €40</div>
+  <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
+    The <strong>Liée Éclat Speciale</strong> bag is designed to stand out with elegance. Its design allows you to combine two colors or add a subtle metallic thread in gold or silver for a sophisticated finish.
+    Customization available: 2 colors or 1 color + metallic thread (gold or silver).
+  </p>
+  <button class="buy-button">Buy</button>
+</div>
+
+<!-- Individual color gallery -->
+<h3 style="margin-top: 3rem;">Available colors:</h3>
+<div class="gallery">
+  <div class="item">
+    <img src="speciale-bianco.jpeg" alt="speciale-bianco" />
+    <div class="overlay">Eclat Speciale White</div>
+  </div>
+  <div class="item">
+    <img src="speciale-nero.jpeg" alt="speciale-nero" />
+    <div class="overlay">Eclat Speciale Black</div>
+  </div>
+</div>
+</section>
+
+<!-- About section -->
+<section id="sobre">
+  <h2>About Liée Sacs</h2>
+  <p>Liée Sacs was born from the desire to create unique handbags combining elegance, delicacy, and comfort.
+     Each piece is carefully designed and handcrafted in Barcelona, using carefully selected materials to ensure quality, durability, and style.
+     Our crochet bags are 100% handmade and made to order, allowing us to focus on every detail and offer a truly exclusive product.
+     The creation process takes between 1 and 2 weeks, reflecting the time and dedication we put into each design.
+  </p>
+</section>
+
+<!-- Contact section -->
+<section id="contacto">
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/xwpbrkjp" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="_replyto" placeholder="Your email" required>
+    <textarea name="message" rows="5" placeholder="Message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div class="socials">
+    <p>Follow us on Instagram:</p>
+    <a href="https://instagram.com/liee_sacs" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; vertical-align:middle;" />@liee_sacs</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Liée Sacs. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

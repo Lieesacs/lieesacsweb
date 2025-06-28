@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liée Sacs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fffefe;
+      color: #574e4e;
+    }
+
+    .language-selector {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .language-selector select {
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      border: 1px solid #faf7f7;
+    }
+
+    .portada img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      background-color: #d8c095;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: hsl(28, 79%, 7%);
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .bienvenida {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .bienvenida img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 1rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .gallery .item {
+      position: relative;
+      width: 280px;
+      text-align: center;
+    }
+
+    .gallery .item img {
+      width: 100%;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery .item:hover img {
+      transform: scale(1.03);
+    }
+
+    .overlay {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .buy-button {
+      display: block;
+      margin: 0.5rem auto 1rem auto;
+      padding: 0.5rem 1.5rem;
+      background-color: #d8c095;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #b79e78;
+    }
+
+    .separator {
+      border: none;
+      border-top: 2px solid #d8c095;
+      margin: 3rem auto;
+      max-width: 600px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #d8c095;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .socials a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: hsl(28, 79%, 7%);
+    }
+  </style>
+  <script>
+    function cambiarIdioma(idioma) {
+      if(idioma === 'es') window.location.href = 'index.html';
+      else if(idioma === 'ca') window.location.href = 'index-ca.html';
+      else if(idioma === 'en') window.location.href = 'index-en.html';
+    }
+  </script>
+</head>
+<body>
+
+<div class="language-selector">
+  <label for="idioma">Idioma:</label>
+  <select id="idioma" onchange="cambiarIdioma(this.value)">
+    <option value="es">Español</option>
+    <option value="ca" selected>Català</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+<section class="portada">
+  <img src="FotoPortada.jpg" alt="Portada Liee Sacs" />
+</section>
+
+<nav>
+  <a href="#inicio">Inici</a>
+  <a href="#tienda">Botiga</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#contacto">Contacte</a>
+</nav>
+
+<section id="inicio" class="hero">
+  <h2>"Liée Sacs: elegància i comoditat en un bolso únic."</h2>
+  <div class="bienvenida">
+    <img src="FotoInici1.JPEG" alt="Taller artesanal" />
+    <img src="FotoInici2.jpg" alt="Material natural" />
+  </div>
+</section>
+
+<section id="tienda">
+  <h2>Botiga</h2>
+  <p>Descobreix els nostres models destacats:</p>
+
+  <div class="item">
+    <img src="Colores-Disponibles.jpg" alt="Colors disponibles" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+    <div class="overlay"><strong>Liée Anse</strong> · 25€</div>
+    <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
+      El bolso <strong>Liée Anse</strong> és l’elecció ideal per al teu dia a dia: des d’un passeig informal fins a una sortida casual. Fet a mà amb cura i dedicació, pots personalitzar-lo triant un color que reflecteixi el teu estil personal.
+      Personalització disponible: 1 color a elecció.
+    </p>
+    <button class="buy-button">Comprar</button>
+  </div>
+
+  <h3 style="margin-top: 3rem;">Colors disponibles:</h3>
+  <div class="gallery">
+    <div class="item">
+      <img src="Blanco.jpg" alt="Anse Blanc" />
+      <div class="overlay">Anse Blanc</div>
+    </div>
+    <div class="item">
+      <img src="Beige.jpg" alt="Anse Beix" />
+      <div class="overlay">Anse Beix</div>
+    </div>
+    <div class="item">
+      <img src="Negro.jpg" alt="Anse Negre" />
+      <div class="overlay">Anse Negre</div>
+    </div>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="item" style="margin-top: 3rem;">
+    <img src="Liee-eclat.jpeg" alt="Liée Éclat" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+    <div class="overlay"><strong>Liée Éclat</strong> · 35€</div>
+    <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
+      El bolso <strong>Liée Éclat</strong> és perfecte per a esdeveniments, celebracions o sopars especials. Fet a mà sota comanda, amb la possibilitat de personalitzar-lo amb el color que més t’identifiqui.
+      Personalització disponible: 1 color a elecció.
+    </p>
+    <button class="buy-button">Comprar</button>
+  </div>
+
+  <div class="item">
+    <img src="Liee-eclat-speciale.jpeg" alt="Liée Éclat speciale" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+    <div class="overlay"><strong>Liée Éclat Speciale</strong> · 40€</div>
+    <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
+      El bolso <strong>Liée Éclat Speciale</strong> és una peça pensada per destacar amb elegància. El seu disseny permet combinar dos colors o afegir un subtil fil metàl·lic daurat o platejat per a un acabat sofisticat.
+      Personalització disponible: 2 colors o 1 color + fil metàl·lic (daurat o platejat).
+    </p>
+    <button class="buy-button">Comprar</button>
+  </div>
+
+  <h3 style="margin-top: 3rem;">Colors disponibles:</h3>
+  <div class="gallery">
+    <div class="item">
+      <img src="speciale-bianco.jpeg" alt="speciale-blanc" />
+      <div class="overlay">Eclat Speciale Blanc</div>
+    </div>
+    <div class="item">
+      <img src="speciale-nero.jpeg" alt="speciale-negre" />
+      <div class="overlay">Eclat Speciale Negre</div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2>Sobre Liée Sacs</h2>
+  <p>
+    Liée Sacs neix del desig de crear bolsos únics combinant elegància, delicadesa i comoditat. 
+    Cada peça està dissenyada i elaborada a mà amb cura a Barcelona, utilitzant materials seleccionats acuradament per garantir qualitat, durabilitat i estil.
+    Els nostres bolsos de ganxet són 100% fets a mà i es confeccionen sota comanda, cosa que permet cuidar cada detall i oferir un producte realment exclusiu. 
+    El procés de creació requereix entre 1 i 2 setmanes, reflectint el temps i dedicació que posem en cada disseny.
+  </p>
+</section>
+
+<section id="contacto">
+  <h2>Contacte</h2>
+  <form action="https://formspree.io/f/xwpbrkjp" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="El teu nom" required>
+    <input type="email" name="_replyto" placeholder="El teu correu electrònic" required>
+    <textarea name="message" rows="5" placeholder="Missatge..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <div class="socials">
+    <p>Segueix-nos a Instagram:</p>
+    <a href="https://instagram.com/liee_sacs" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; vertical-align:middle;" />@liee_sacs</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Liée Sacs. Tots els drets reservats.</p>
+</footer>
+
+</body>
+</html>
