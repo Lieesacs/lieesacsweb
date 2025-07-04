@@ -150,7 +150,6 @@
   <script>
     function cambiarIdioma(idioma) {
       if(idioma === 'es') window.location.href = 'index.html';
-      else if(idioma === 'ca') window.location.href = 'index-ca.html';
       else if(idioma === 'en') window.location.href = 'index-en.html';
     }
   </script>
@@ -161,7 +160,6 @@
   <label for="idioma">Idioma:</label>
   <select id="idioma" onchange="cambiarIdioma(this.value)">
     <option value="es" selected>Español</option>
-    <option value="ca">Català</option>
     <option value="en">English</option>
   </select>
 </div>
@@ -173,10 +171,11 @@
 
 <!-- Menú de navegació -->
 <nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#tienda">Tienda</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#contacto">Contacto</a>
+  <a href="#Inicio">Inicio</a>
+  <a href="#Bolsos">Bolsos</a>
+  <a href="#Accesorios">Accesorios</a>
+  <a href="#Sobre">Sobre</a>
+  <a href="#Contacto">Contacto</a>
 </nav>
 
 <!-- Secció benvinguda -->
@@ -189,8 +188,8 @@
 </section>
 
 <!-- Tienda amb galeria -->
-<section id="tienda">
-  <h2>Tienda</h2>
+<section id="Bolsos">
+  <h2>Bolsos</h2>
   <p>Descubre nuestros modelos destacados:</p>
 
 <!-- Presentació del model -->
@@ -217,7 +216,7 @@
       <div class="overlay">Anse Beige</div>
     </div>
     <div class="item">
-      <img src="Negro.JPG" alt="Anse Negro" />
+      <img src="Negro.jpg" alt="Anse Negro" />
       <div class="overlay">Anse Negro</div>
     </div>
   </div>
@@ -227,9 +226,11 @@
   <hr class="separator" />
 
 
-  <!-- Presentació del model -->
 <div class="item" style="margin-top: 3rem;">
-  <img src="Liee-eclat.jpeg" alt="Liée Éclat" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <img src="Liee-eclat.jpeg" alt="Liée Éclat 1" style="max-width: 240px; width: 100%; border-radius: 1rem;" />
+    <img src="Liee-eclat2.JPG" alt="Liée Éclat 2" style="max-width: 240px; width: 100%; border-radius: 1rem;" />
+  </div>
   <div class="overlay"><strong>Liée Éclat</strong> · 35€</div>
   <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
     El bolso <strong>Liée Éclat</strong> es perfecto para eventos, celebraciones o cenas especiales. Hecho a mano bajo pedido, con la posibilidad de personalizarlo con el color que más te identifique.
@@ -254,18 +255,31 @@
   <div class="gallery">
     <div class="item">
       <img src="speciale-bianco.jpeg" alt="speciale-bianco" />
-      <div class="overlay">Eclat speciale blanco</div>
+      <div class="overlay">Éclat speciale blanco</div>
     </div>
     <div class="item">
       <img src="speciale-nero.jpeg" alt="speciale-nero" />
-      <div class="overlay">Eclat speciale negro</div>
+      <div class="overlay">Éclat speciale negro</div>
     </div>
   </div>
 </section>
 
+<!-- Sección de Accesorios -->
+<section id="Accesorios">
+  <h2>Accesorios</h2>
+  <p>Complementa tu bolso con nuestros accesorios hechos a mano:</p>
+
+  <div class="gallery">
+    <div class="item">
+      <img src="Accesorio1.jpeg" alt="Correa bolso Éclat" />
+      <div class="overlay"><strong>Correa Éclat</strong> · 8€</div>
+      <button class="buy-button">Comprar</button>
+    </div>
+  </div>
+</section>
 
 <!-- Secció "Sobre" -->
-<section id="sobre">
+<section id="Sobre">
   <h2>Sobre Liée Sacs</h2>
   <p>Liée Sacs nace del deseo de crear bolsos únicos combinando elegancia, delicadeza y comodidad. 
      Cada pieza es cuidadosamente diseñada y elaborada a mano en Barcelona, utilizando materiales cuidadosamente seleccionados para garantizar calidad, durabilidad y estilo.
@@ -275,7 +289,7 @@
 </section>
 
 <!-- Secció de contacte -->
-<section id="contacto">
+<section id="Contacto">
   <h2>Contacto</h2>
   <form action="https://formspree.io/f/xwpbrkjp" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Tu nombre" required>
@@ -296,5 +310,3 @@
 
 </body>
 </html>
-
-
