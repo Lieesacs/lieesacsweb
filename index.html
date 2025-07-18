@@ -25,15 +25,13 @@
       border: 1px solid #faf7f7;
     }
 
-.portada img {
-  width: 100%;
-  max-height: 400px; /* Pots ajustar l'altura si vols que no sigui tan alta */
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border-radius: 0; /* Pots posar 1rem si vols cantonades arrodonides */
-}
-
+    .portada img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
 
     nav {
       background-color: #d8c095;
@@ -81,19 +79,25 @@
       justify-content: center;
     }
 
-    .gallery .item {
-      position: relative;
-      width: 280px;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .carousel-container {
       text-align: center;
     }
 
-    .gallery .item img {
-      width: 100%;
+    .carousel-img {
+      width: 280px;
       border-radius: 1rem;
       transition: transform 0.3s ease;
     }
 
-    .gallery .item:hover img {
+    .carousel-container:hover .carousel-img {
       transform: scale(1.03);
     }
 
@@ -108,7 +112,7 @@
       margin: 0.5rem auto 1rem auto;
       padding: 0.5rem 1.5rem;
       background-color: #d8c095;
-      color: rgb(255, 255, 255);
+      color: white;
       border: none;
       border-radius: 0.5rem;
       font-weight: bold;
@@ -116,14 +120,15 @@
       transition: background-color 0.3s ease;
     }
 
-    .separator {
-  border: none;
-  border-top: 2px solid #d8c095;
-  margin: 3rem auto;
-  max-width: 600px;
-}
     .buy-button:hover {
-      background-color: #d8c095;
+      background-color: #c2aa83;
+    }
+
+    .separator {
+      border: none;
+      border-top: 2px solid #d8c095;
+      margin: 3rem auto;
+      max-width: 600px;
     }
 
     .contact-form input, .contact-form textarea {
@@ -149,8 +154,8 @@
   </style>
   <script>
     function cambiarIdioma(idioma) {
-      if(idioma === 'es') window.location.href = 'index.html';
-      else if(idioma === 'en') window.location.href = 'index-en.html';
+      if (idioma === 'es') window.location.href = 'index.html';
+      else if (idioma === 'en') window.location.href = 'index-en.html';
     }
   </script>
 </head>
@@ -164,12 +169,10 @@
   </select>
 </div>
 
-<!-- Portada amb imatge principal -->
 <section class="portada">
   <img src="FotoPortada.jpg" alt="Portada Liee Sacs" />
 </section>
 
-<!-- Menú de navegació -->
 <nav>
   <a href="#Inicio">Inicio</a>
   <a href="#Bolsos">Bolsos</a>
@@ -178,7 +181,6 @@
   <a href="#Contacto">Contacto</a>
 </nav>
 
-<!-- Secció benvinguda -->
 <section id="inicio" class="hero">
   <h2>"Liée Sacs: elegancia y comodidad en un bolso único."</h2>
   <div class="bienvenida">
@@ -187,108 +189,128 @@
   </div>
 </section>
 
-<!-- Tienda amb galeria -->
 <section id="Bolsos">
   <h2>Bolsos</h2>
   <p>Descubre nuestros modelos destacados:</p>
 
-<!-- Presentació del model -->
-<div class="item">
-  <img src="Colores-Disponibles.jpg" alt="Colores disponibles" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
-  <div class="overlay"><strong>Liée Anse</strong> · 25€</div>
-  <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
-    El bolso <strong>Liée Anse</strong>  es la elección ideal para utilizar en tu rutina diaria: desde un paseo casual hasta una salida informal. Hecho a mano con cuidado y dedicación, puedes personalizarlo eligiendo un color que refleje tu estilo personal.
-    Personalización disponible: 1 color a elección.
-  </p>
-  <button class="buy-button">Comprar</button>
-</div>
-
-
-  <!-- Galeria de colors individuals -->
-  <h3 style="margin-top: 3rem;">Colores disponibles:</h3>
-  <div class="gallery">
-    <div class="item">
-      <img src="Blanco.jpg" alt="Anse Blanco" />
-      <div class="overlay">Anse Blanco</div>
+  <div class="item">
+    <div class="carousel-container" data-carousel="anse">
+      <img class="carousel-img" src="Blanco.jpg" alt="Anse Blanco" />
+      <div class="overlay carousel-label">Anse Blanco</div>
+      <div>
+        <button class="buy-button prev">⟵</button>
+        <button class="buy-button next">⟶</button>
+      </div>
     </div>
-    <div class="item">
-      <img src="Beige.jpg" alt="Anse Beige" />
-      <div class="overlay">Anse Beige</div>
-    </div>
-    <div class="item">
-      <img src="Negro.JPG" alt="Anse Negro" />
-      <div class="overlay">Anse Negro</div>
-    </div>
+    <div class="overlay"><strong>Liée Anse</strong> · 25€</div>
+    </p><strong>Liée Anse Speciale</strong>  está diseñado para quienes valoran la funcionalidad sin renunciar al estilo, permite combinar un color y añadir un sutil hilo metálico en dorado o plateado para un acabado sofisticado.
+    Personalización disponible: 1 color + hilo metálico (dorado o plateado).<p>
+    <button class="buy-button">Comprar</button>
   </div>
 
-  
-  <!-- Separador -->
   <hr class="separator" />
 
-
-<div class="item" style="margin-top: 3rem;">
-  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <img src="Liee-eclat.jpeg" alt="Liée Éclat 1" style="max-width: 240px; width: 100%; border-radius: 1rem;" />
-    <img src="Liee-eclat2.JPG" alt="Liée Éclat 2" style="max-width: 240px; width: 100%; border-radius: 1rem;" />
+  <div class="item">
+    <div class="carousel-container" data-carousel="anseSpeciale">
+      <img class="carousel-img" src="Anse-speciale.jpeg" alt="Anse speciale" />
+      <div class="overlay carousel-label">Anse Speciale</div>
+      <div>
+        <button class="buy-button prev">⟵</button>
+        <button class="buy-button next">⟶</button>
+      </div>
+    </div>
+    <div class="overlay"><strong>Liée Anse Speciale</strong> · 30€</div>
+    <p>Diseñado para quienes valoran estilo y funcionalidad. Personalización: color + hilo metálico dorado o plateado.</p>
+    <button class="buy-button">Comprar</button>
   </div>
-  <div class="overlay"><strong>Liée Éclat</strong> · 35€</div>
-  <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
-    El bolso <strong>Liée Éclat</strong> es perfecto para eventos, celebraciones o cenas especiales. Hecho a mano bajo pedido, con la posibilidad de personalizarlo con el color que más te identifique.
-    Personalización disponible: 1 color a elección.
-  </p>
-  <button class="buy-button">Comprar</button>
-</div>
 
+  <hr class="separator" />
 
-  <!-- Presentació del model -->
-<div class="item">
-  <img src="Liee-eclat-speciale.jpeg" alt="Colores disponibles" style="max-width: 500px; width: 100%; display: block; margin: 0 auto; border-radius: 1rem;" />
-  <div class="overlay"><strong>Liée Éclat speciale</strong> · 40€</div>
-  <p style="text-align: center; max-width: 600px; margin: 0.5rem auto;">
-    El bolso <strong>Liée Éclat speciale</strong> es una pieza pensada para destacar con elegancia. Su diseño permite combinar dos colores o añadir un sutil hilo metálico en dorado o plateado para un acabado sofisticado.
-    Personalización disponible: 2 colores o 1 color + hilo metálico (dorado o plateado).
-  </p>
-  <button class="buy-button">Comprar</button>
-</div>
-  <!-- Galeria de colors individuals -->
-  <h3 style="margin-top: 3rem;">Colores disponibles:</h3>
-  <div class="gallery">
-    <div class="item">
-      <img src="speciale-bianco.jpeg" alt="speciale-bianco" />
-      <div class="overlay">Éclat speciale blanco</div>
+  <div class="item">
+    <div class="carousel-container" data-carousel="eclat">
+      <img class="carousel-img" src="Liee-eclat.jpeg" alt="Liée Éclat" />
+      <div class="overlay carousel-label">Éclat Marrón</div>
+      <div>
+        <button class="buy-button prev">⟵</button>
+        <button class="buy-button next">⟶</button>
+      </div>
     </div>
-    <div class="item">
-      <img src="speciale-nero.jpeg" alt="speciale-nero" />
-      <div class="overlay">Éclat speciale negro</div>
+    <div class="overlay"><strong>Liée Éclat</strong> · 30€</div>
+    <p>Bolso <strong>Liée Éclat</strong> es perfecto para eventos, celebraciones o cenas especiales. 
+    Hecho a mano bajo pedido, con la posibilidad de personalizarlo con el color que más te identifique. Personalización disponible: 1 color a elección.</p>
+    <button class="buy-button">Comprar</button>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="item">
+    <div class="carousel-container" data-carousel="speciale">
+      <img class="carousel-img" src="speciale-bianco.jpeg" alt="Éclat Speciale Blanco" />
+      <div class="overlay carousel-label">Spéciale Blanco</div>
+      <div>
+        <button class="buy-button prev">⟵</button>
+        <button class="buy-button next">⟶</button>
+      </div>
     </div>
+    <div class="overlay"><strong>Liée Éclat Speciale</strong> · 35€</div>
+    <p>El bolso <strong>Liée Éclat speciale</strong> es una pieza pensada para destacar con elegancia. Su diseño permite combinar dos colores o añadir un sutil hilo metálico en dorado o plateado para un acabado sofisticado.
+    Personalización disponible: 2 colores o 1 color + hilo metálico (dorado o plateado).</p>
+    <button class="buy-button">Comprar</button>
   </div>
 </section>
 
-<!-- Sección de Accesorios -->
+<hr class="separator" />
+
+
+<div class="item">
+  <div class="carousel-container" data-carousel="eclatDuo">
+    <img class="carousel-img" src="eclat-duo.jpg" alt="Éclat Duo" />
+    <div class="overlay carousel-label">Éclat Duo</div>
+    <div>
+      <button class="buy-button prev">⟵</button>
+      <button class="buy-button next">⟶</button>
+    </div>
+  </div>
+  <div class="overlay"><strong>Liée Éclat duo</strong> · 35€</div>
+  <p>
+    El bolso <strong>Liée Éclat duo</strong> es una pieza pensada para destacar con elegancia.
+    Su diseño permite combinar dos colores para un acabado más personalizado.
+    <br><br>
+    <strong>Personalización disponible:</strong> 2 colores.
+  </p>
+  <button class="buy-button">Comprar</button>
+</div>
+
+<hr class="separator" />
+
+
+
 <section id="Accesorios">
   <h2>Accesorios</h2>
   <p>Complementa tu bolso con nuestros accesorios hechos a mano:</p>
 
-  <div class="gallery">
-    <div class="item">
-      <img src="Accesorio1.jpeg" alt="Correa bolso Éclat" />
+  <div class="item">
+    <div class="carousel-container" data-carousel="accesorios">
+      <img class="carousel-img" src="Accesorio1.jpeg" alt="Accesorio 1" />
+      <div class="overlay carousel-label">Flor</div>
+      <div>
+        <button class="buy-button prev">⟵</button>
+        <button class="buy-button next">⟶</button>
+      </div>
       <div class="overlay"><strong>Correa Éclat</strong> · 8€</div>
       <button class="buy-button">Comprar</button>
     </div>
   </div>
 </section>
 
-<!-- Secció "Sobre" -->
 <section id="Sobre">
   <h2>Sobre Liée Sacs</h2>
   <p>Liée Sacs nace del deseo de crear bolsos únicos combinando elegancia, delicadeza y comodidad. 
      Cada pieza es cuidadosamente diseñada y elaborada a mano en Barcelona, utilizando materiales cuidadosamente seleccionados para garantizar calidad, durabilidad y estilo.
      Nuestros bolsos de crochet son 100% hechos a mano y se confeccionan bajo pedido, lo que permite cuidar cada detalle y ofrecer un producto verdaderamente exclusivo. 
-     El proceso de creación requiere entre 1 y 2 semanas, reflejando el tiempo y la dedicación que ponemos en cada diseño.
-  </p>
+     El proceso de creación requiere entre 1 y 2 semanas, reflejando el tiempo y la dedicación que ponemos en cada diseño.</p>
 </section>
 
-<!-- Secció de contacte -->
 <section id="Contacto">
   <h2>Contacto</h2>
   <form action="https://formspree.io/f/xwpbrkjp" method="POST" class="contact-form">
@@ -300,13 +322,72 @@
   <div class="socials">
     <p>Síguenos en nuestro Instagram:</p>
     <a href="https://instagram.com/liee_sacs" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; vertical-align:middle;" />@liee_sacs</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; vertical-align:middle;" /> @liee_sacs
+    </a>
   </div>
 </section>
-<!-- Peu de pàgina -->
+
 <footer>
   <p>&copy; 2025 Liée Sacs. Todos los derechos reservados.</p>
 </footer>
+
+<script>
+  const carousels = {
+    anse: [
+      { img: 'Blanco.jpg', label: 'Anse Blanco' },
+      { img: 'Beige.jpg', label: 'Anse Beige' },
+      { img: 'Negro.jpg', label: 'Anse Negro' }
+    ],
+    anseSpeciale: [
+      { img: 'Anse-speciale.jpeg', label: 'Anse Speciale Blanco + Dorado' }
+    ],
+    eclat: [
+      { img: 'Liee-eclat.jpeg', label: 'Éclat Marrón' },
+      { img: 'Liee-eclat2.jpg', label: 'Éclat Flor' },
+      { img: 'Liee-eclat3.jpeg', label: 'Éclat Rojo' }
+    ],
+    speciale: [
+      { img: 'speciale-bianco.jpeg', label: 'Spéciale Blanco' },
+      { img: 'speciale-nero.jpeg', label: 'Spéciale Negro' }
+    ],
+
+    eclatDuo: [
+  { img: 'eclat-duo.jpg', label: 'Éclat Duo' }
+    ],
+    accesorios: [
+      { img: 'Accesorio1.jpeg', label: 'Flor' },
+      { img: 'Accesorio2.jpeg', label: 'Rojo' },
+      { img: 'Accesorio3.jpeg', label: 'Duo' }
+    ]
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.carousel-container').forEach(container => {
+      const key = container.dataset.carousel;
+      let index = 0;
+      const img = container.querySelector('.carousel-img');
+      const label = container.querySelector('.carousel-label');
+
+      const showImage = () => {
+        img.src = carousels[key][index].img;
+        img.alt = carousels[key][index].label;
+        label.textContent = carousels[key][index].label;
+      };
+
+      container.querySelector('.prev').addEventListener('click', () => {
+        index = (index - 1 + carousels[key].length) % carousels[key].length;
+        showImage();
+      });
+
+      container.querySelector('.next').addEventListener('click', () => {
+        index = (index + 1) % carousels[key].length;
+        showImage();
+      });
+
+      showImage();
+    });
+  });
+</script>
 
 </body>
 </html>
