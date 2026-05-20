@@ -6,151 +6,28 @@
   <title>Liée Sacs</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fffefe;
-      color: #574e4e;
-    }
-
-    .language-selector {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-
-    .language-selector select {
-      padding: 0.3rem;
-      border-radius: 0.3rem;
-      border: 1px solid #faf7f7;
-    }
-
-    .portada img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-
-    nav {
-      background-color: #d8c095;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: hsl(28, 79%, 7%);
-      font-weight: bold;
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    .bienvenida {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .bienvenida img {
-      width: 100%;
-      max-width: 480px;
-      border-radius: 1rem;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .carousel-container {
-      text-align: center;
-    }
-
-    .carousel-img {
-      width: 280px;
-      border-radius: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .carousel-container:hover .carousel-img {
-      transform: scale(1.03);
-    }
-
-    .overlay {
-      margin-top: 0.5rem;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .buy-button {
-      display: block;
-      margin: 0.5rem auto 1rem auto;
-      padding: 0.5rem 1.5rem;
-      background-color: #d8c095;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .buy-button:hover {
-      background-color: #c2aa83;
-    }
-
-    .separator {
-      border: none;
-      border-top: 2px solid #d8c095;
-      margin: 3rem auto;
-      max-width: 600px;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #d8c095;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    .socials a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: hsl(28, 79%, 7%);
-    }
+    body { margin: 0; font-family: 'Quicksand', sans-serif; background-color: #fffefe; color: #574e4e; }
+    .language-selector { position: absolute; top: 1rem; right: 1rem; }
+    .language-selector select { padding: 0.3rem; border-radius: 0.3rem; border: 1px solid #faf7f7; }
+    .portada img { width: 100%; max-height: 400px; object-fit: cover; display: block; margin: 0 auto; }
+    nav { background-color: #d8c095; display: flex; justify-content: center; gap: 2rem; padding: 1rem; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: hsl(28, 79%, 7%); font-weight: bold; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    .hero h2 { font-size: 2rem; text-align: center; }
+    .bienvenida { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; }
+    .bienvenida img { width: 100%; max-width: 480px; border-radius: 1rem; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+    .item { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem; }
+    .carousel-container { text-align: center; cursor: pointer; touch-action: pan-y; user-select: none; }
+    .carousel-img { width: 280px; border-radius: 1rem; transition: transform 0.3s ease; -webkit-user-drag: none; }
+    .carousel-container:hover .carousel-img { transform: scale(1.03); }
+    .overlay { margin-top: 0.5rem; font-weight: bold; font-size: 1rem; }
+    .buy-button { display: block; margin: 0.5rem auto 1rem auto; padding: 0.5rem 1.5rem; background-color: #d8c095; color: white; border: none; border-radius: 0.5rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; }
+    .buy-button:hover { background-color: #c2aa83; }
+    .separator { border: none; border-top: 2px solid #d8c095; margin: 3rem auto; max-width: 600px; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 0.5rem; }
+    footer { text-align: center; background-color: #d8c095; padding: 1rem; margin-top: 2rem; }
+    .socials a { margin: 0 1rem; text-decoration: none; color: hsl(28, 79%, 7%); }
   </style>
   <script>
     function cambiarIdioma(idioma) {
@@ -174,10 +51,10 @@
 </section>
 
 <nav>
-  <a href="#Inicio">Inicio</a>
+  <a href="#inicio">Inicio</a>
   <a href="#Bolsos">Bolsos</a>
   <a href="#Accesorios">Accesorios</a>
-  <a href="#Sobre">Sobre</a>
+  <a href="#Marca">Marca</a>
   <a href="#Contacto">Contacto</a>
 </nav>
 
@@ -194,33 +71,16 @@
   <p>Descubre nuestros modelos destacados:</p>
 
   <div class="item">
-    <div class="carousel-container" data-carousel="anse">
-      <img class="carousel-img" src="Blanco.jpg" alt="Anse Blanco" />
-      <div class="overlay carousel-label">Anse Blanco</div>
-      <div>
-        <button class="buy-button prev">⟵</button>
-        <button class="buy-button next">⟶</button>
-      </div>
+    <div class="carousel-container" data-carousel="Adoreé">
+      <img class="carousel-img" src="Adoreeg.jpg" alt="Adoreé Gris" />
+      <div class="overlay carousel-label">Adoreé Gris</div>
     </div>
-    <div class="overlay"><strong>Liée Anse</strong> · 25€</div>
-    </p><strong>Liée Anse </strong>  está diseñado para quienes valoran la funcionalidad sin renunciar al estilo.
-    Personalización disponible: 1 color <p>
-    <button class="buy-button">Comprar</button>
-  </div>
+    <div class="overlay"><strong>Adorée</strong> · 30€</div>
+    <p><strong></strong> El bolso Adorée es un bolso de mano diseñado para aportar luminosidad y sofisticación a cualquier look. Su acabado con lentejuelas lo convierte en la pieza ideal para eventos, celebraciones y ocasiones especiales.
 
-  <hr class="separator" />
+Cada modelo está tejido artesanalmente bajo encargo, haciendo de cada bolso una creación única. Consulta las opciones de colores disponibles y personaliza tu diseño según tu estilo.
 
-  <div class="item">
-    <div class="carousel-container" data-carousel="anseSpeciale">
-      <img class="carousel-img" src="Anse-speciale.jpeg" alt="Anse speciale" />
-      <div class="overlay carousel-label">Anse Speciale</div>
-      <div>
-        <button class="buy-button prev">⟵</button>
-        <button class="buy-button next">⟶</button>
-      </div>
-    </div>
-    <div class="overlay"><strong>Liée Anse Speciale</strong> · 30€</div>
-    <p>Diseñado para quienes valoran estilo y funcionalidad. Personalización: color + hilo metálico dorado o plateado.</p>
+Puedes añadir una cadena extraíble de acero inoxidable en acabado dorado o plateado por 5 € adicionales.</p>
     <button class="buy-button">Comprar</button>
   </div>
 
@@ -230,85 +90,80 @@
     <div class="carousel-container" data-carousel="eclat">
       <img class="carousel-img" src="Liee-eclat.jpeg" alt="Liée Éclat" />
       <div class="overlay carousel-label">Éclat Marrón</div>
-      <div>
-        <button class="buy-button prev">⟵</button>
-        <button class="buy-button next">⟶</button>
-      </div>
     </div>
-    <div class="overlay"><strong>Liée Éclat</strong> · 30€</div>
-    <p>Bolso <strong>Liée Éclat</strong> es perfecto para eventos, celebraciones o cenas especiales. 
-    Hecho a mano bajo pedido, con la posibilidad de personalizarlo con el color que más te identifique. Personalización disponible: 1 color a elección.</p>
+    <div class="overlay"><strong>Liée Éclat</strong> · 26€</div>
+    <p>El bolso <strong>Liée Éclat</strong> Éclat combina diseño artesanal y versatilidad en un bolso pensado para acompañarte a diario. Su silueta atemporal lo convierte en un complemento fácil de combinar, elevando cualquier conjunto con un toque elegante.
+
+Disponible en acabado de un solo color o con detalle de hilo brillante dorado o plateado para un efecto más especial.
+
+Todos nuestros modelos están tejidos a mano bajo encargo. Consulta las opciones de colores disponibles y personaliza tu pieza.
+
+
+Puedes añadir una cadena extraíble de acero inoxidable en acabado dorado o plateado por 5 € adicionales.</p>
     <button class="buy-button">Comprar</button>
   </div>
 
   <hr class="separator" />
 
   <div class="item">
-    <div class="carousel-container" data-carousel="speciale">
-      <img class="carousel-img" src="speciale-bianco.jpeg" alt="Éclat Speciale Blanco" />
-      <div class="overlay carousel-label">Spéciale Blanco</div>
-      <div>
-        <button class="buy-button prev">⟵</button>
-        <button class="buy-button next">⟶</button>
-      </div>
+    <div class="carousel-container" data-carousel="Bijou">
+      <img class="carousel-img" src="FotoInici2.jpg" alt="Bijou Marrón" />
+      <div class="overlay carousel-label">Bijou Marrón</div>
     </div>
-    <div class="overlay"><strong>Liée Éclat Speciale</strong> · 35€</div>
-    <p>El bolso <strong>Liée Éclat speciale</strong> es una pieza pensada para destacar con elegancia. Su diseño permite combinar dos colores o añadir un sutil hilo metálico en dorado o plateado para un acabado sofisticado.
-    Personalización disponible: 2 colores o 1 color + hilo metálico (dorado o plateado).</p>
+    <div class="overlay"><strong>Bijou</strong> · 34€</div>
+    <p>El bolso de hombro <strong>Bijou</strong> Ha sido diseñado para para destacar. Su acabado con lentejuelas aporta brillo y sofisticación, convirtiéndolo en el complemento perfecto para eventos, cenas y celebraciones especiales.
+
+
+Cada bolso se confecciona artesanalmente bajo pedido. Consulta los colores disponibles y elige la cadena extraíble de acero inoxidable en acabado dorado o plateado para personalizar tu diseño.</p>
+    <button class="buy-button">Comprar</button>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="item">
+    <div class="carousel-container" data-carousel="Nuit">
+      <img class="carousel-img" src="Nuitn.jpg" alt="Nuit Negro" />
+      <div class="overlay carousel-label">Nuit Negro</div>
+    </div>
+    <div class="overlay"><strong>Nuit</strong> · 29€</div>
+    <p>El bolso <strong>Nuit</strong> está diseñado para quienes buscan un accesorio versátil con un estilo elegante y minimalista. Perfecto para el día a día, su diseño combina fácilmente con diferentes looks y ocasiones.
+
+Disponible en versión monocromática o con detalle de hilo brillante dorado o plateado para aportar un toque distintivo.
+
+
+Todos nuestros modelos están tejidos a mano bajo encargo. Consulta las opciones de colores disponibles y personaliza tu bolso eligiendo una cadena extraíble de acero inoxidable en acabado dorado o plateado.<br><br><strong>Personalización disponible:</strong> 2 colores.</p>
     <button class="buy-button">Comprar</button>
   </div>
 </section>
 
 <hr class="separator" />
 
-
-<div class="item">
-  <div class="carousel-container" data-carousel="eclatDuo">
-    <img class="carousel-img" src="eclat-duo.JPG" alt="Éclat Duo" />
-    <div class="overlay carousel-label">Éclat Duo</div>
-    <div>
-      <button class="buy-button prev">⟵</button>
-      <button class="buy-button next">⟶</button>
-    </div>
-  </div>
-  <div class="overlay"><strong>Liée Éclat duo</strong> · 35€</div>
-  <p>
-    El bolso <strong>Liée Éclat duo</strong> es una pieza pensada para destacar con elegancia.
-    Su diseño permite combinar dos colores para un acabado más personalizado.
-    <br><br>
-    <strong>Personalización disponible:</strong> 2 colores.
-  </p>
-  <button class="buy-button">Comprar</button>
-</div>
-
-<hr class="separator" />
-
-
-
 <section id="Accesorios">
   <h2>Accesorios</h2>
-  <p>Complementa tu bolso con nuestros accesorios hechos a mano:</p>
+  <p>Personaliza tu pieza con una cadena extraíble de 100 cm, diseñada para aportar versatilidad.
+
+Disponible en tonalidad dorada o plateada, este complemento permite transformar fácilmente tu bolso según la ocasión, combinando funcionalidad y elegancia.
+
+Compatible con los modelos Éclat y Adorée.
+
+Material: Acero inoxidable
+Longitud: 100 cm
+Acabados: Dorado / Plateado
+Precio: +5 €</p>
 
   <div class="item">
     <div class="carousel-container" data-carousel="accesorios">
       <img class="carousel-img" src="Accesorio1.jpeg" alt="Accesorio 1" />
       <div class="overlay carousel-label">Flor</div>
-      <div>
-        <button class="buy-button prev">⟵</button>
-        <button class="buy-button next">⟶</button>
-      </div>
-      <div class="overlay"><strong>Correa Éclat</strong> · 8€</div>
-      <button class="buy-button">Comprar</button>
     </div>
+    <div class="overlay"><strong>Correa Éclat</strong> · 8€</div>
+    <button class="buy-button">Comprar</button>
   </div>
 </section>
 
 <section id="Sobre">
   <h2>Sobre Liée Sacs</h2>
-  <p>Liée Sacs nace del deseo de crear bolsos únicos combinando elegancia, delicadeza y comodidad. 
-     Cada pieza es cuidadosamente diseñada y elaborada a mano en Barcelona, utilizando materiales cuidadosamente seleccionados para garantizar calidad, durabilidad y estilo.
-     Nuestros bolsos de crochet son 100% hechos a mano y se confeccionan bajo pedido, lo que permite cuidar cada detalle y ofrecer un producto verdaderamente exclusivo. 
-     El proceso de creación requiere entre 1 y 2 semanas, reflejando el tiempo y la dedicación que ponemos en cada diseño.</p>
+  <p>Liée Sacs nace del deseo de crear bolsos únicos combinando elegancia, delicadeza y comodidad. Cada pieza es cuidadosamente diseñada y elaborada a mano en Barcelona, utilizando materiales cuidadosamente seleccionados para garantizar calidad, durabilidad y estilo. Nuestros bolsos de crochet son 100% hechos a mano y se confeccionan bajo pedido. El proceso de creación requiere entre 1 y 2 semanas.</p>
 </section>
 
 <section id="Contacto">
@@ -333,26 +188,22 @@
 
 <script>
   const carousels = {
-    anse: [
-      { img: 'Blanco.jpg', label: 'Anse Blanco' },
-      { img: 'Beige.jpg', label: 'Anse Beige' },
-      { img: 'Negro.JPG', label: 'Anse Negro' }
-    ],
-    anseSpeciale: [
-      { img: 'Anse-speciale.jpeg', label: 'Anse Speciale Blanco + Dorado' }
-    ],
-    eclat: [
-      { img: 'Liee-eclat.jpeg', label: 'Éclat Marrón' },
-      { img: 'Liee-eclat2.JPG', label: 'Éclat Flor' },
-      { img: 'Liee-eclat3.jpeg', label: 'Éclat Rojo' }
-    ],
-    speciale: [
-      { img: 'speciale-bianco.jpeg', label: 'Spéciale Blanco' },
-      { img: 'speciale-nero.jpeg', label: 'Spéciale Negro' }
+    Adorée: [
+      { img: 'Adoreeg.jpg', label: 'Adoreé Gris' },
+      { img: 'Adoreev.jpg', label: 'Adoreé Rojo' },
     ],
 
-    eclatDuo: [
-  { img: 'eclat-duo.JPG', label: 'Éclat Duo' }
+    eclat: [
+      { img: 'Liee-eclat.jpg', label: 'Éclat Marrón' },
+      { img: 'Liee-eclat2.jpg', label: 'Éclat Blanco Dorado' }
+    
+    ],
+    Bijou: [
+      { img: 'fotoportada2.jpeg', label: 'Bijou Marrón' },
+    ],
+    Nuit: [
+      { img: 'Nuitn.jpg', label: 'Nuit Negro' },
+      { img: 'Nuitv.jpg', label: 'Nuit Rojo' }
     ],
     accesorios: [
       { img: 'Accesorio1.jpeg', label: 'Flor' },
@@ -364,6 +215,8 @@
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.carousel-container').forEach(container => {
       const key = container.dataset.carousel;
+      if (!carousels[key]) return;
+
       let index = 0;
       const img = container.querySelector('.carousel-img');
       const label = container.querySelector('.carousel-label');
@@ -371,15 +224,42 @@
       const showImage = () => {
         img.src = carousels[key][index].img;
         img.alt = carousels[key][index].label;
-        label.textContent = carousels[key][index].label;
+        if (label) label.textContent = carousels[key][index].label;
       };
 
-      container.querySelector('.prev').addEventListener('click', () => {
-        index = (index - 1 + carousels[key].length) % carousels[key].length;
+      let startX = 0;
+      let pointerDown = false;
+
+      img.addEventListener('pointerdown', (e) => {
+        startX = e.clientX;
+        pointerDown = true;
+      });
+
+      img.addEventListener('pointerup', (e) => {
+        if (!pointerDown) return;
+        pointerDown = false;
+        const diff = e.clientX - startX;
+        const total = carousels[key].length;
+        if (total <= 1) return;
+
+        if (Math.abs(diff) > 50) {
+          index = diff < 0
+            ? (index + 1) % total
+            : (index - 1 + total) % total;
+        } else {
+          index = (index + 1) % total;
+        }
         showImage();
       });
 
-      container.querySelector('.next').addEventListener('click', () => {
+      // Botones opcionales: solo se enganchan si existen
+      const prev = container.querySelector('.prev');
+      const next = container.querySelector('.next');
+      if (prev) prev.addEventListener('click', () => {
+        index = (index - 1 + carousels[key].length) % carousels[key].length;
+        showImage();
+      });
+      if (next) next.addEventListener('click', () => {
         index = (index + 1) % carousels[key].length;
         showImage();
       });
@@ -389,5 +269,7 @@
   });
 </script>
 
+</body>
+</html>
 </body>
 </html>
